@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+backend/.DS_Store
+backend/src/.DS_Store
+.env
+*.log
+backend/evid_*.json
