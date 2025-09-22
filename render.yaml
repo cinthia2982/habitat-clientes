@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: habitat-backend
+    env: node
+    rootDir: backend
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: free
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: PORT
+        value: "8080"
+      - key: CORS_ORIGIN
+        sync: false
+    healthCheckPath: /health
